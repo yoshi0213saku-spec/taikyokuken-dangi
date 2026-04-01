@@ -117,7 +117,7 @@
                             <p>
                                 しかしそれは偽物ではなく、多くが初歩段階に留まっているだけであり、本来の太極拳は音楽に頼らず集中して行い、動作の中にある用法（攻防の意味）を重視する奥深い武術である。
                             </p>
-                            <p class="text-xs text-gray-500 italic">
+                            <p class="text-xs text-blue-500 italic">
                                 真の太極拳は、外見は単純でも内面は極めて奥深く、最終的には無意識に技が発揮できる境地を目指す修行である。
                             </p>
                         </div>
@@ -133,7 +133,8 @@
                 </div>
                 
                 <div class="bg-gray-100/50 rounded-full px-2 py-1 mb-6">
-                    <audio id="main-audio" controls class="w-full h-10 focus:outline-none">
+                    <!-- controlsList="nodownload" を追加してダウンロードを防止 -->
+                    <audio id="main-audio" controls controlsList="nodownload" oncontextmenu="return false;" class="w-full h-10 focus:outline-none">
                         お使いのブラウザはオーディオ再生に対応していません。
                     </audio>
                 </div>

@@ -139,13 +139,13 @@
                 </div>
 
                 <div class="space-y-4" id="playlist">
-                    <!-- music-oootoko のカード -->
+                    <!-- トラック 01 -->
                     <div onclick="playTrack('music-oootoko.mp3', '大男を吹き飛ばす太極拳の物理学', this)" 
-                         class="group cursor-pointer p-6 rounded-3xl border border-gray-50 hover:border-blue-200 transition-all duration-300">
+                         class="group cursor-pointer p-6 rounded-3xl border border-gray-50 hover:border-blue-200 transition-all duration-300 bg-white/50 mb-2">
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-5">
-                                <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center shadow-lg shadow-blue-200 flex-shrink-0">
-                                    <div class="w-4 h-4 bg-white rounded-full"></div>
+                                <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+                                    <div class="w-3.5 h-3.5 bg-blue-500 rounded-full"></div>
                                 </div>
                                 <div>
                                     <h4 class="text-[14px] font-bold text-gray-800 leading-tight">大男を吹き飛ばす太極拳の物理学</h4>
@@ -153,6 +153,23 @@
                                 </div>
                             </div>
                             <span class="text-sm text-blue-500 font-bold">01</span>
+                        </div>
+                    </div>
+
+                    <!-- トラック 02 -->
+                    <div onclick="playTrack('music-jimekeranai.mp3', '地面を蹴らない太極拳の力学', this)" 
+                         class="group cursor-pointer p-6 rounded-3xl border border-gray-50 hover:border-blue-200 transition-all duration-300 bg-white/50">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-5">
+                                <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+                                    <div class="w-3.5 h-3.5 bg-blue-500 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <h4 class="text-[14px] font-bold text-gray-800 leading-tight">地面を蹴らない太極拳の力学</h4>
+                                    <p class="text-[9px] text-gray-400 uppercase tracking-widest mt-1">FILE: MUSIC-JIMEKERANAI</p>
+                                </div>
+                            </div>
+                            <span class="text-sm text-blue-500 font-bold">02</span>
                         </div>
                     </div>
                 </div>
@@ -182,7 +199,6 @@
             <div class="glass-card rounded-3xl p-10 text-center mt-12 border border-gray-100 shadow-sm">
                 <p class="text-[10px] text-gray-400 uppercase tracking-[0.4em] mb-6 font-bold">Authorized Curator</p>
                 <div class="relative w-32 h-24 mx-auto mb-6 flex items-center justify-center overflow-hidden rounded-xl bg-gray-50 border border-gray-100 shadow-inner">
-                    <!-- 更新箇所：srcをaikon-sita1.pngに変更 -->
                     <img src="./aikon-sita1.png" alt="デジタル資料館" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/128x96?text=Curator'">
                 </div>
                 <h4 class="text-xl font-bold text-gray-900 mb-1">中島 義健</h4>

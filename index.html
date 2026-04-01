@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>太極拳の「内なるメカニズム」 - AI Biomechanics Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700;900&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #fcfbf7;
+            --accent-blue: #2563eb;
+            --accent-emerald: #10b981;
+            --text-main: #1a202c;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+        }
+
+        .title-serif {
+            font-family: 'Noto Serif JP', serif;
+            font-weight: 900;
+            letter-spacing: -0.01em;
+            line-height: 1.2;
+        }
+
+        .title-sub {
+            letter-spacing: 0.1em;
+            font-weight: 800;
+            color: #4a5568;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.03);
+        }
+
+        .track-active {
+            border-left: 4px solid var(--accent-blue);
+            background: #eff6ff;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <div class="max-w-2xl mx-auto px-4 py-8 md:py-12">
+        
+        <!-- ナビゲーション -->
+        <nav class="mb-8 fade-in">
+            <a href="https://yoshi0213saku-spec.github.io/deji-sogouannai01/" class="inline-flex items-center space-x-2 text-gray-400 hover:text-blue-600 transition-colors duration-300 group">
+                <div class="w-8 h-8 rounded-full bg-white border border-gray-100 flex items-center justify-center shadow-sm group-hover:border-blue-100 group-hover:bg-blue-50">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </div>
+                <span class="text-xs font-bold tracking-widest uppercase">総合案内に戻る</span>
+            </a>
+        </nav>
+
+        <!-- ヘッダー -->
+        <header class="text-center mb-12 fade-in">
+            <div class="space-y-2 pt-6">
+                <!-- 追加箇所：太極拳談義 -->
+                <p class="text-sm md:text-lg title-sub text-blue-500 font-bold">太極拳談義</p>
+                <h1 class="text-2xl md:text-4xl text-gray-900 title-serif">
+                    太極拳の <br class="md:hidden"> <span class="text-blue-600">「内なるメカニズム」</span>
+                </h1>
+            </div>
+        </header>
+
+        <div class="space-y-8 fade-in">
+            <!-- 概要・本質紹介カード -->
+            <div class="glass-card rounded-3xl p-8 space-y-10 border border-gray-100 shadow-sm">
+                
+                <div class="space-y-8">
+                    <!-- ポイント ① -->
+                    <div class="bg-blue-50/40 p-6 rounded-2xl border border-blue-50">
+                        <h2 class="text-xs font-bold text-blue-500 uppercase tracking-[0.3em] mb-4">Core Philosophy 01</h2>
+                        <h4 class="text-sm font-black text-gray-800 mb-3 flex items-center">
+                            <span class="w-2 h-2 bg-blue-600 rounded-full mr-2 shadow-sm"></span>
+                            武道としての太極拳
+                        </h4>
+                        <p class="text-[13px] text-gray-700 leading-relaxed font-medium">
+                            太極拳は中国武術の一つで、柔らかくゆったりとした動きを特徴としながらも、実際には攻防の「用法」を内に含んだ武道である。動作に意識や呼吸を集中させることで精神面も鍛えられ、年齢や体力に応じて運動量を調整できるため、健康増進にも効果がある。本来は戦場で培われた実践的な技術を基盤とし、日々の鍛錬によって心・技・体を統合的に高めていく修行である。
+                        </p>
+                    </div>
+
+                    <!-- ポイント ② -->
+                    <div class="bg-gray-50/40 p-6 rounded-2xl border border-gray-100">
+                        <h2 class="text-xs font-bold text-gray-400 uppercase tracking-[0.3em] mb-4">Core Philosophy 02</h2>
+                        <h4 class="text-sm font-black text-gray-800 mb-3 flex items-center">
+                            <span class="w-2 h-2 bg-gray-400 rounded-full mr-2 shadow-sm"></span>
+                            武術的本質の追求
+                        </h4>
+                        <div class="text-[13px] text-gray-700 leading-relaxed font-medium space-y-3">
+                            <p>
+                                現在の太極拳は、音楽に合わせて美しい衣装で演武されることも多く、健康体操や舞踊のような側面が強くなっており、武術本来の実戦性が薄れている場合が多い。
+                            </p>
+                            <p>
+                                しかしそれは偽物ではなく、多くが初歩段階に留まっているだけであり、本来の太極拳は音楽に頼らず集中して行い、動作の中にある用法（攻防の意味）を重視する奥深い武術である。
+                            </p>
+                            <p class="text-xs text-gray-500 italic">
+                                真の太極拳は、外見は単純でも内面は極めて奥深く、最終的には無意識に技が発揮できる境地を目指す修行である。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- アーカイブセクション -->
+            <div class="glass-card rounded-3xl p-8 border border-gray-100 shadow-sm">
+                <div class="flex items-center justify-between mb-6">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Oral Archive</span>
+                    <span id="playing-indicator" class="text-[10px] text-gray-400 font-medium">待機中...</span>
+                </div>
+                
+                <audio id="main-audio" controls class="w-full h-10 mb-8 focus:outline-none">
+                    お使いのブラウザはオーディオ再生に対応していません。
+                </audio>
+
+                <div class="space-y-4" id="playlist">
+                    <div onclick="playTrack('music-oootoko.mp3', '大男を吹き飛ばす太極拳の物理学', '解析データに基づく力学的解説', this)" 
+                         class="group cursor-pointer p-5 rounded-2xl border border-gray-100 hover:border-blue-200 hover:bg-white transition-all duration-300">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-gray-800">大男を吹き飛ばす太極拳の物理学</h4>
+                                    <p class="text-[10px] text-gray-400 uppercase mt-1">File: music-oootoko.mp3</p>
+                                </div>
+                            </div>
+                            <span class="text-xs text-blue-400 font-bold">01</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 動画リンク -->
+            <div class="glass-card rounded-3xl p-8 border-l-8 border-blue-600">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M2 6a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" /><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 8l4 2-4 2V8z" />
+                        </svg>
+                        AI Analysis Video
+                    </span>
+                    <a href="https://youtu.be/ifDE-ojZpiM" target="_blank" class="text-[10px] text-blue-600 font-bold hover:underline uppercase">YouTubeで視聴 →</a>
+                </div>
+                <h4 class="text-lg font-bold text-gray-900 leading-tight mb-4">太極拳の秘められた強さ</h4>
+                <p class="text-sm text-gray-600 mb-6">
+                    「力を用いない」ことで生まれる、真の太極拳の強さをバイオメカニクスの視点から解説。
+                </p>
+                <a href="https://youtu.be/ifDE-ojZpiM" target="_blank" class="inline-flex items-center px-6 py-2.5 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 transition-all duration-300 shadow-sm text-xs">
+                    視聴を開始する
+                </a>
+            </div>
+
+            <!-- キュレーター -->
+            <div class="glass-card rounded-3xl p-10 text-center mt-12 border border-gray-100 shadow-sm">
+                <p class="text-[10px] text-gray-400 uppercase tracking-[0.4em] mb-6 font-bold">Authorized Curator</p>
+                <div class="relative w-32 h-24 mx-auto mb-6 flex items-center justify-center overflow-hidden rounded-xl bg-gray-50 border border-gray-100 shadow-inner">
+                    <img src="./aikon-sita.png" alt="デジタル資料館" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/128x96?text=Curator'">
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-1">中島 義健</h4>
+                <p class="text-sm text-blue-600 font-bold mb-4">日本武術太極拳連盟 会員</p>
+                <a href="mailto:yoshi0213@gmail.com" class="text-xs text-gray-400 font-mono bg-gray-50 py-2 rounded-lg inline-block px-4 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300">
+                    yoshi0213@gmail.com
+                </a>
+            </div>
+        </div>
+
+        <footer class="mt-20 text-center text-gray-400 text-[10px] tracking-[0.5em] uppercase font-bold">
+            &copy; 2024 AI TaiChi Biomechanics Digital Archive
+        </footer>
+    </div>
+
+    <script>
+        function playTrack(url, title, insight, element) {
+            const audio = document.getElementById('main-audio');
+            const indicator = document.getElementById('playing-indicator');
+            document.querySelectorAll('#playlist > div').forEach(el => el.classList.remove('track-active', 'bg-white', 'shadow-md'));
+            element.classList.add('track-active', 'bg-white', 'shadow-md');
+            audio.src = url;
+            indicator.innerText = "読み込み中...";
+            audio.play().then(() => {
+                indicator.innerText = "再生中: " + title;
+            }).catch(error => {
+                indicator.innerHTML = '<span class="text-red-500 font-bold">再生失敗</span>';
+            });
+        }
+    </script>
+</body>
+</html>

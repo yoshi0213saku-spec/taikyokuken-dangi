@@ -41,8 +41,9 @@
         }
 
         .track-active {
-            border-left: 4px solid var(--accent-blue);
-            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            background: #ffffff;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
         }
 
         .fade-in {
@@ -127,36 +128,38 @@
             <!-- アーカイブセクション -->
             <div class="glass-card rounded-3xl p-8 border border-gray-100 shadow-sm">
                 <div class="flex items-center justify-between mb-6">
-                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Oral Archive</span>
-                    <span id="playing-indicator" class="text-[10px] text-gray-400 font-medium">待機中...</span>
+                    <span class="text-[11px] font-black text-blue-600 uppercase tracking-widest">ORAL ARCHIVE</span>
+                    <span id="playing-indicator" class="text-[10px] text-gray-400 font-bold">待機中...</span>
                 </div>
                 
-                <audio id="main-audio" controls class="w-full h-10 mb-8 focus:outline-none">
-                    お使いのブラウザはオーディオ再生に対応していません。
-                </audio>
+                <div class="bg-gray-100/50 rounded-full px-2 py-1 mb-6">
+                    <audio id="main-audio" controls class="w-full h-10 focus:outline-none">
+                        お使いのブラウザはオーディオ再生に対応していません。
+                    </audio>
+                </div>
 
                 <div class="space-y-4" id="playlist">
-                    <!-- music-oootoko の設定 -->
-                    <div onclick="playTrack('music-oootoko.mp3', '大男を吹き飛ばす太極拳の物理学', '解析データに基づく力学的解説', this)" 
-                         class="group cursor-pointer p-5 rounded-2xl border border-gray-100 hover:border-blue-200 hover:bg-white transition-all duration-300">
+                    <!-- music-oootoko のカード -->
+                    <div onclick="playTrack('music-oootoko.mp3', '大男を吹き飛ばす太極拳の物理学', this)" 
+                         class="group cursor-pointer p-6 rounded-3xl border border-gray-50 hover:border-blue-200 transition-all duration-300">
                         <div class="flex items-center justify-between">
-                            <div class="flex items-center space-x-4">
-                                <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"/></svg>
+                            <div class="flex items-center space-x-5">
+                                <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center shadow-lg shadow-blue-200 flex-shrink-0">
+                                    <div class="w-4 h-4 bg-white rounded-full"></div>
                                 </div>
                                 <div>
-                                    <h4 class="text-sm font-bold text-gray-800">大男を吹き飛ばす太極拳の物理学</h4>
-                                    <p class="text-[10px] text-gray-400 uppercase mt-1">File: music-oootoko</p>
+                                    <h4 class="text-[14px] font-bold text-gray-800 leading-tight">大男を吹き飛ばす太極拳の物理学</h4>
+                                    <p class="text-[9px] text-gray-400 uppercase tracking-widest mt-1">FILE: MUSIC-OOOTOKO</p>
                                 </div>
                             </div>
-                            <span class="text-xs text-blue-400 font-bold">01</span>
+                            <span class="text-sm text-blue-500 font-bold">01</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- 動画リンク -->
-            <div class="glass-card rounded-3xl p-8 border-l-8 border-blue-600">
+            <div class="glass-card rounded-3xl p-8 border-l-8 border-blue-600 shadow-sm">
                 <div class="flex items-center justify-between mb-4">
                     <span class="text-xs font-bold text-blue-600 uppercase tracking-widest flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" viewBox="0 0 20 20" fill="currentColor">
@@ -167,10 +170,10 @@
                     <a href="https://youtu.be/ifDE-ojZpiM" target="_blank" class="text-[10px] text-blue-600 font-bold hover:underline uppercase">YouTubeで視聴 →</a>
                 </div>
                 <h4 class="text-lg font-bold text-gray-900 leading-tight mb-4">太極拳の秘められた強さ</h4>
-                <p class="text-sm text-gray-600 mb-6">
+                <p class="text-sm text-gray-600 mb-6 leading-relaxed">
                     「力を用いない」ことで生まれる、真の太極拳の強さをバイオメカニクスの視点から解説。
                 </p>
-                <a href="https://youtu.be/ifDE-ojZpiM" target="_blank" class="inline-flex items-center px-6 py-2.5 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 transition-all duration-300 shadow-sm text-xs">
+                <a href="https://youtu.be/ifDE-ojZpiM" target="_blank" class="inline-flex items-center px-8 py-3 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 transition-all duration-300 shadow-md shadow-blue-100 text-xs">
                     視聴を開始する
                 </a>
             </div>
@@ -179,7 +182,8 @@
             <div class="glass-card rounded-3xl p-10 text-center mt-12 border border-gray-100 shadow-sm">
                 <p class="text-[10px] text-gray-400 uppercase tracking-[0.4em] mb-6 font-bold">Authorized Curator</p>
                 <div class="relative w-32 h-24 mx-auto mb-6 flex items-center justify-center overflow-hidden rounded-xl bg-gray-50 border border-gray-100 shadow-inner">
-                    <img src="./aikon-sita.png" alt="デジタル資料館" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/128x96?text=Curator'">
+                    <!-- 更新箇所：srcをaikon-sita1.pngに変更 -->
+                    <img src="./aikon-sita1.png" alt="デジタル資料館" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/128x96?text=Curator'">
                 </div>
                 <h4 class="text-xl font-bold text-gray-900 mb-1">中島 義健</h4>
                 <p class="text-sm text-blue-600 font-bold mb-4">日本武術太極拳連盟 会員</p>
@@ -195,18 +199,35 @@
     </div>
 
     <script>
-        function playTrack(url, title, insight, element) {
+        function playTrack(url, title, element) {
             const audio = document.getElementById('main-audio');
             const indicator = document.getElementById('playing-indicator');
-            document.querySelectorAll('#playlist > div').forEach(el => el.classList.remove('track-active', 'bg-white', 'shadow-md'));
-            element.classList.add('track-active', 'bg-white', 'shadow-md');
-            audio.src = url;
+            
+            document.querySelectorAll('#playlist > div').forEach(el => el.classList.remove('track-active'));
+            element.classList.add('track-active');
+            
+            const targetUrl = new URL(url, window.location.href).href;
+            if (audio.src !== targetUrl) {
+                audio.src = url;
+                audio.load();
+            }
+            
+            indicator.className = "text-[10px] text-blue-500 font-bold";
             indicator.innerText = "読み込み中...";
+            
             audio.play().then(() => {
+                indicator.className = "text-[10px] text-blue-500 font-bold";
                 indicator.innerText = "再生中: " + title;
             }).catch(error => {
-                indicator.innerHTML = '<span class="text-red-500 font-bold">再生失敗</span>';
+                console.error("Playback failed:", error);
+                indicator.className = "text-[10px] text-red-500 font-bold";
+                indicator.innerText = "再生失敗";
             });
+
+            audio.onerror = () => {
+                indicator.className = "text-[10px] text-red-500 font-bold";
+                indicator.innerText = "再生失敗";
+            };
         }
     </script>
 </body>
